@@ -1,0 +1,37 @@
+<script>
+    /*
+    PROBLEMA: Custo quilometragem percorrida
+    Peça para o Motorista informar a quantidade de vezes que abasteceu.
+    Peça também para o Motorista informar a distância total percorrida (em quilômetros)
+    Após, usando a estrutura de repetição "for com variável de controle", peça para o Motorista informar o custo de cada abastecimento efetuado.
+    Calcule o custo de cada quilômetro percorrido (quilometragem / custo total dos abastecimentos).
+    Apresente três dados:
+    - O custo de cada quilômetro percorrido
+    - O custo total dos abastecimentos efetuadas
+    - A quilometragem total percorrida
+    */
+
+    //ENTRADA
+
+    const quantAbastecimento = Number(prompt("Informe quantas vezes abasteceu: "));
+    const quantKm = Number(prompt("Informe quantos km foram percorridos: "));
+    let custoCadaAbastecimento;
+    let custoPorKm;
+    let custoPorAbastecimento = [];
+    let custoTotalAbastecimento = 0;
+
+    //PROCESSAMENTO
+
+    for(contador =1; contador <= quantAbastecimento; contador++){
+    custoCadaAbastecimento = Number(prompt(`Informe o custo do abastecimento ${contador} de ${quantAbastecimento}: `))
+    custoPorAbastecimento.push(custoCadaAbastecimento)
+    custoPorKm = quantKm / custoCadaAbastecimento
+    custoTotalAbastecimento = custoTotalAbastecimento + custoCadaAbastecimento
+    }
+
+    //SAÍDA
+
+    document.write(`Custo de quilometragem percorrida: ${custoPorAbastecimento.join(", ")} <br> Custo total dos abastecimentos efetuados ${custoTotalAbastecimento}R$ <br> A quilometragem total percorrida foi de ${quantKm}Km`)
+
+
+</script>   
