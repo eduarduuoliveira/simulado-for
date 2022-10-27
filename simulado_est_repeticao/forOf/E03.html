@@ -8,12 +8,15 @@
     */
 
     //ENTRADA
-
-
+    let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
+let tecnico = []
+let ficcao = []
     //PROCESSAMENTO
-
-
+for(let livro of listaLivros){
+    let genero = prompt(`Qual o genero desse livro?\nLivro: ${livro}\nT para tecnico\nF para ficção`).toLowerCase();
+    (genero == "t") ? tecnico.push(livro) : ficcao.push(livro)
+}
     //SAÍDA
-
+document.write(`Lista de livros de ficçao: ${ficcao.join(", ")}</br>Total: ${ficcao.length}</br>Lista de livros tecnicos: ${tecnico.join(", ")}</br>Total: ${tecnico.length}`)
 
 </script>

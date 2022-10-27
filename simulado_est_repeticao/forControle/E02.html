@@ -12,26 +12,15 @@
     */
 
     //ENTRADA
-
-    const quantAbastecimento = Number(prompt("Informe quantas vezes abasteceu: "));
-    const quantKm = Number(prompt("Informe quantos km foram percorridos: "));
-    let custoCadaAbastecimento;
-    let custoPorKm;
-    let custoPorAbastecimento = [];
-    let custoTotalAbastecimento = 0;
-
+let qa = parseInt(prompt("Quantas vezes voce abasteceu?"))
+let qm = parseInt(prompt("Quantos km voce percorreu?"))
+let total = 0
     //PROCESSAMENTO
-
-    for(contador =1; contador <= quantAbastecimento; contador++){
-    custoCadaAbastecimento = Number(prompt(`Informe o custo do abastecimento ${contador} de ${quantAbastecimento}: `))
-    custoPorAbastecimento.push(custoCadaAbastecimento)
-    custoPorKm = quantKm / custoCadaAbastecimento
-    custoTotalAbastecimento = custoTotalAbastecimento + custoCadaAbastecimento
-    }
-
+for (let index = 1; index < qa + 1; index++) {
+    let p = Number(prompt(`Qual foi o valor do ${index}° abastecida?`))
+    total = total + p
+}
     //SAÍDA
+document.write(`Cada quilometro custou: R$${total/qm}</br>O custo total dos abastecimentos efetuadas: R$${total}</br>A quilometragem total percorrida: ${qm}`)
 
-    document.write(`Custo de quilometragem percorrida: ${custoPorAbastecimento.join(", ")} <br> Custo total dos abastecimentos efetuados ${custoTotalAbastecimento}R$ <br> A quilometragem total percorrida foi de ${quantKm}Km`)
-
-
-</script>   
+</script>
