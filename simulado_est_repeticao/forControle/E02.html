@@ -12,15 +12,15 @@
     */
 
     //ENTRADA
-let qa = parseInt(prompt("Quantas vezes voce abasteceu?"))
-let qm = parseInt(prompt("Quantos km voce percorreu?"))
+let quantidadeAbasteceu = parseInt(prompt("Quantas vezes voce abasteceu?"))
+let quantidadeKm = parseInt(prompt("Quantos km voce percorreu?"))
 let total = 0
     //PROCESSAMENTO
-for (let index = 1; index < qa + 1; index++) {
-    let p = Number(prompt(`Qual foi o valor do ${index}° abastecida?`))
-    total = total + p
+for (let controle = 1; controle < quantidadeAbasteceu + 1; controle++) {
+    let valorAbastecido = Number(prompt(`Qual foi o valor do ${controle}° abastecida?`))
+    total = total + valorAbastecido
 }
     //SAÍDA
-document.write(`Cada quilometro custou: R$${total/qm}</br>O custo total dos abastecimentos efetuadas: R$${total}</br>A quilometragem total percorrida: ${qm}`)
+document.write(`Cada quilometro custou: R$${total/quantidadeKm}</br>O custo total dos abastecimentos efetuadas: R$${total}</br>A quilometragem total percorrida: ${quantidadeKm}`)
 
 </script>

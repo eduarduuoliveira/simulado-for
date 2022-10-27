@@ -11,14 +11,14 @@
     */
 
     //ENTRADA
-let valori = Number(prompt("Qual o valor inicial?"))
+let valorInvestimento = Number(prompt("Qual o valor inicial?"))
 let meses = 1
-let valor = valori
+let valor = valorInvestimento
     //PROCESSAMENTO
-for (let i = 0; valor < valori * 2; i++) {
+for (let controle = 0; valor < valorInvestimento * 2; controle++) {
     valor = valor * 1.005
-    meses = i
+    meses = controle
 }
     //SAÍDA
-document.write(`O Investimento Inicial foi de ${valori}</br>Quantidade de meses necessário para ser duplicado: ${meses} meses`)
+document.write(`O Investimento Inicial foi de ${valorInvestimento}</br>Quantidade de meses necessário para ser duplicado: ${meses} meses`)
 </script>

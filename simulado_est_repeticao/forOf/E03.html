@@ -11,12 +11,23 @@
     let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
 let tecnico = []
 let ficcao = []
+let livrosSem = [];
     //PROCESSAMENTO
 for(let livro of listaLivros){
     let genero = prompt(`Qual o genero desse livro?\nLivro: ${livro}\nT para tecnico\nF para ficção`).toLowerCase();
-    (genero == "t") ? tecnico.push(livro) : ficcao.push(livro)
+    if(genero != "t" && genero != "f")
+    {
+    livrosSem.push(livro)
+    }
+   else if (genero === "t"){
+    tecnico.push(livro)
+   }
+   else{
+    ficcao.push(livro)
+   }
+    
 }
     //SAÍDA
-document.write(`Lista de livros de ficçao: ${ficcao.join(", ")}</br>Total: ${ficcao.length}</br>Lista de livros tecnicos: ${tecnico.join(", ")}</br>Total: ${tecnico.length}`)
+document.write(`Lista de livros de ficçao: ${ficcao.join(", ")}</br>Total: ${ficcao.length}</br>Lista de livros tecnicos: ${tecnico.join(", ")}</br>Total: ${tecnico.length} <br> Lista de livros sem genero específico: ${livrosSem.join(", ")}</br>Total: ${livrosSem.length}`)
 
 </script>

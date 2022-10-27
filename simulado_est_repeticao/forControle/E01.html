@@ -8,15 +8,15 @@
 
     //ENTRADA
 let alunos = parseInt(prompt("Quantos alunos voce possui?"))
-let m = []
-let f = []
+let masculino = []
+let feminino = []
     //PROCESSAMENTO
-for (let i = 1; i < alunos + 1; i++) {
-    const al = parseInt(prompt(`O aluno ${i} é (1) - menino ou (2) - menina?`))
-    if (al == 1) m.push(prompt(`Qual o nome do aluno ${i}?`))
-    else f.push(prompt(`Qual o nome do aluno ${i}?`))
+for (let controle = 1; controle < alunos + 1; controle++) {
+    const aluno = parseInt(prompt(`O aluno ${controle} é (1) - menino ou (2) - menina?`))
+    if (aluno == 1) masculino.push(prompt(`Qual o nome do aluno ${controle}?`))
+    else feminino.push(prompt(`Qual o nome do aluno ${controle}?`))
 }
     //SAÍDA
-document.write(`Lista de meninos: ${m.sort((a,b) => a - b).join(", ")} </br>Lista de meninos: ${f.sort((a,b) => a - b).join(", ")}`)
+document.write(`Lista de meninos: ${masculino.sort((a,b) => a - b).join(", ")} </br>Lista de meninos: ${feminino.sort((a,b) => a - b).join(", ")}`)
     
 </script>
